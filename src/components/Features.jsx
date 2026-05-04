@@ -25,8 +25,8 @@ export default function Features() {
       alt: "Disease Identification",
       title: "Disease Identification",
       text: "Spot problems early before they spread. Quick identification means faster action and fewer losses across your entire crop.",
-      to: "#",
-      isInternal: false,
+      to: "/disease-care",
+      isInternal: true,
       reverse: false,
     },
   ];
@@ -46,9 +46,13 @@ export default function Features() {
               <h3>{feature.title}</h3>
               <p>{feature.text}</p>
               {feature.isInternal ? (
-                <Link to={feature.to} className="btn-feature">Explore</Link>
+                <Link to={feature.to} className="btn-feature">
+                  Explore
+                </Link>
               ) : (
-                <a href={feature.to} className="btn-feature">Explore</a>
+                <a href={feature.to} className="btn-feature">
+                  Explore
+                </a>
               )}
             </div>
           </div>

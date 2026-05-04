@@ -11,6 +11,7 @@ import Mission from "./components/Mission";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 import CropRecommendation from "./pages/CropRecommendation";
+import DiseaseCare from "./pages/DiseaseCare";
 
 function HomePage() {
   useEffect(() => {
@@ -23,7 +24,7 @@ function HomePage() {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.12 },
     );
     document.querySelectorAll(".reveal").forEach((el) => revealObs.observe(el));
     return () => revealObs.disconnect();
@@ -57,6 +58,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/crop-recommendation" element={<CropRecommendation />} />
+        <Route path="/disease-care" element={<DiseaseCare />} />
       </Routes>
     </BrowserRouter>
   );
